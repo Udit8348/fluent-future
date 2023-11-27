@@ -33,11 +33,27 @@ button {
 }
 
 .progress-bar {
-    width: 40%;
+    width: 0%;
     height: 20px;
     background-color: #4CAF50; /* Green */
     text-align: center;
     line-height: 20px;
     color: white;
     border-radius: 5px;
+}
+
+.module-content {
+    width: 50%;
+    margin: 0 auto; /* Center the element horizontally */
+    /* Add any other styles for the module-content div as needed */
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: space-between; /* Space elements evenly along the container */
+}
+
+.pros,
+.cons {
+    width: 48%; /* Adjust the width as needed, leaving some space for margins */
 }
