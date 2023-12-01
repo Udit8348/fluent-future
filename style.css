@@ -5,37 +5,64 @@ body {
 }
 
 .container {
-    background-color: #f8f8f8; /* Cream colored background */
+    background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
 }
 
 h1 {
     font-family: 'Arial', sans-serif;
-    color: #333; /* Default text color */
+    color: #333;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50; /* Green */
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 0 5px; /* Add some margin between buttons */
+}
+
+#backBtn,
+#restartBtn {
+    background-color: #36029e;
+    color: white;
+}
+
+#getStartedBtn {
+    background-color: #36029e; /* Change color for Get Started button */
+    color: white;
+}
+
+#backBtn {
+    background-image: url('./res/icons8-back-arrow-96.png'); /* Set the path to your image */
+    background-size: cover; /* Scale image proportionally to fit within the button */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    width: 40px; /* Set the width of the button */
+    height: 40px; /* Set the height of the button */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
 .progress-container {
     width: 50%;
     margin: 20px auto;
-    background-color: rgb(161, 174, 161); /* Light Green */
+    background-color: rgb(161, 174, 161);
 }
 
 .progress-bar {
     width: 0%;
     height: 20px;
-    background-color: #4CAF50; /* Green */
+    background-color: #36029e;
     text-align: center;
     line-height: 20px;
     color: white;
@@ -44,16 +71,36 @@ button {
 
 .module-content {
     width: 50%;
-    margin: 0 auto; /* Center the element horizontally */
-    /* Add any other styles for the module-content div as needed */
+    margin: 0 auto;
 }
 
 .side-by-side {
     display: flex;
-    justify-content: space-between; /* Space elements evenly along the container */
+    justify-content: space-between;
 }
 
 .pros,
 .cons {
-    width: 48%; /* Adjust the width as needed, leaving some space for margins */
+    width: 48%;
+}
+
+/* Add the following CSS styles */
+.table-container {
+    margin: 20px auto; /* Center the table and add padding above and below */
+    max-width: 300px; /* Adjust the max-width as needed */
+}
+
+.table-of-contents {
+    width: 100%;
+    border-collapse: collapse; /* Remove border spacing */
+}
+
+.table-of-contents th, .table-of-contents td {
+    border: 1px solid #ddd; /* Add border to cells */
+    padding: 8px; /* Add padding to cells */
+    text-align: center; /* Center text */
+}
+
+.table-of-contents th {
+    background-color: #f2f2f2; /* Gray background for header */
 }
