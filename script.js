@@ -2,16 +2,20 @@
 const progressBar = document.getElementById('myProgressBar');
 const getStartedButton = document.getElementById('getStartedBtn');
 const restartButton = document.getElementById('restartBtn');
+const backButton = document.getElementById('backBtn');
 const contentContainer = document.querySelector('.text-images-container');
 
 // Retrieve stored progress and module number from localStorage
 let progress = 0;
-let moduleNumber = parseInt(localStorage.getItem('moduleNumber')) || 1;
+
+// inspect >> more options >> application >> storage (clear all)
+localStorage.clear();
+let moduleNumber = parseInt(localStorage.getItem('moduleNumber')) || 0;
 const totalModules = 6;
 
 // Content for each module
 const moduleContent = [
-    `<!-- TODO: the styling is somewhat plain, we could dress this up with some css (keep consistent between the module pages) --><!-- TODO: we could benefit from a summary of what these modules are (hint: target the audience) and add some AI generated images (could take inspiration from mock ups in proposal) --><div class="module-content">Welcome to Fluent Future, Press the Button To Begin</div>`,`<div class="module-content">    <h2>Module 1: LLM Types</h2>    <div class="sections-container">      <div class="full-width">        <section class="review">          <!-- Content for Review -->          <h3>Overview</h3>          <p>There are two main types of AI, probabilistic and rule-based AI</p>        </section>      </div>        <div class="side-by-side">            <section class="pros">                <h3>Probabilistic AI</h3>                <!-- TODO: find some examples of tools that use probabilistic methods, add an AI generated image to demonstrate this, maybe link to an article -->                <p>Probabilistic AI uses its best guess on what word comes next. Essentially they have been trained to give a series of the most probable words from a given prompt. They are good at generating text and having conversations. One prominent example is ChatGPT.</p>            </section>            <section class="cons">                <!-- TODO: find some examples of tools that use rule-base ai, add an ai generated image to demonstrate this, maybe link to an article -->                <h3>Rule-Based AI</h3>                <p>Rules-Based AI uses hard-coded rules to evaluate text. Instead of guessing the next word based on probability, these models determine grammar errors and suggest corrections with explanations. They are good for evaluating the correctness of writing. They can also be used to identify parts of speech and tense used.</p>            </section>        </div>        <div class="full-width">            <section class="discussion">                <!-- Content for Discussion -->                <h3>Discussion</h3>                <p>Discussion content goes here.</p>                <style>                    body {                      font-family: Arial, sans-serif;                      margin: 0;                      padding: 0;                      background-color: #f4f4f4;                    }                                    #discussion-board {                      max-width: 600px;                      margin: 20px auto;                      background-color: #fff;                      padding: 20px;                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);                    }                                    #message-container {                      margin-bottom: 20px;                    }                                    .message {                      border-bottom: 1px solid #ddd;                      padding: 10px;                    }                                    .message:last-child {                      border-bottom: none;                    }                                    #input-container {                      display: flex;                      margin-top: 20px;                    }                                    #message-input {                      flex: 1;                      padding: 10px;                      border: 1px solid #ddd;                      border-radius: 4px;                    }                                    #post-button {                      padding: 10px;                      background-color: #4caf50;                      color: #fff;                      border: none;                      border-radius: 4px;                      cursor: pointer;                    }                  </style>                <!-- </head> -->                <!-- <body> -->                                <div id="discussion-board">                  <div id="message-container"></div>                                  <div id="input-container">                    <input type="text" id="message-input" placeholder="Type your message...">                    <button id="post-button" onclick="postMessage()">Post</button>                  </div>                </div>                                <script>                  function postMessage() {                    var messageInput = document.getElementById('message-input');                    var messageContainer = document.getElementById('message-container');                                    var messageText = messageInput.value.trim();                    if (messageText !== '') {                      var messageDiv = document.createElement('div');                      messageDiv.className = 'message';                      messageDiv.textContent = messageText;                                      messageContainer.appendChild(messageDiv);                      messageInput.value = '';                    }                  }                </script>                                <!-- </body> -->            </section>        </div>    </div></div>`,`<div class="module-content">Module 2: Prompt Engineering</div>`,`<div class="module-content">Module 3: Generating Content</div>`,`<div class="module-content">Module 4: Recommendation Ideas</div>`,`<div class="module-content">Module 5: High Volume Grading</div>`,`<div class="module-content">Module 6: Manual Review</div>`,
+    `<!-- TODO: the styling is somewhat plain, we could dress this up with some css (keep consistent between the module pages) --><!-- TODO: we could benefit from a summary of what these modules are (hint: target the audience) and add some AI generated images (could take inspiration from mock ups in proposal) --><!-- TODO: we could benefit from a motivation page that explains why this course is worth doing, this could be a good place for more academic research and ethos to our module --><!-- https://kpeters40.wixsite.com/clip-animal-conserva/courses --><!-- New container for text and images --><div class="text-images-container">    <!-- Table of Contents -->    <!-- Content for each module -->    <div class="module-content" id="moduleContent">        Welcome to Fluent Future, Press the Button To Begin    </div>        <div class="table-container">        <table class="table-of-contents">            <tr>                <th>Table of Contents</th>            </tr>            <tr>                <td>Welcome</td>            </tr>            <tr>                <td>Module 1: LLM Types</td>            </tr>            <tr>                <td>Module 2: Prompt Engineering</td>            </tr>            <tr>                <td>Module 3: Generating Content</td>            </tr>            <tr>                <td>Module 4: Recommendation Ideas</td>            </tr>            <tr>                <td>Module 5: High Volume Grading</td>            </tr>            <tr>                <td>Module 6: Manual Review</td>            </tr>        </table>    </div>    </div>`,`<div class="module-content">    <h2>Module 1: LLM Types</h2>    <div class="sections-container">      <div class="full-width">        <section class="review">          <!-- Content for Review -->          <h3>Overview</h3>          <p>There are two main types of AI, probabilistic and rule-based AI</p>        </section>      </div>        <div class="side-by-side">            <section class="pros">                <h3>Probabilistic AI</h3>                <!-- TODO: find some examples of tools that use probabilistic methods, add an AI generated image to demonstrate this, maybe link to an article -->                <p>Probabilistic AI uses its best guess on what word comes next. Essentially they have been trained to give a series of the most probable words from a given prompt. They are good at generating text and having conversations. One prominent example is ChatGPT.</p>            </section>            <section class="cons">                <!-- TODO: find some examples of tools that use rule-base ai, add an ai generated image to demonstrate this, maybe link to an article -->                <h3>Rule-Based AI</h3>                <p>Rules-Based AI uses hard-coded rules to evaluate text. Instead of guessing the next word based on probability, these models determine grammar errors and suggest corrections with explanations. They are good for evaluating the correctness of writing. They can also be used to identify parts of speech and tense used.</p>            </section>        </div>        <div class="full-width">            <section class="discussion">                <!-- Content for Discussion -->                <h3>Discussion</h3>                <p>Discussion content goes here.</p>                <style>                    body {                      font-family: Arial, sans-serif;                      margin: 0;                      padding: 0;                      background-color: #f4f4f4;                    }                                    #discussion-board {                      max-width: 600px;                      margin: 20px auto;                      background-color: #fff;                      padding: 20px;                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);                    }                                    #message-container {                      margin-bottom: 20px;                    }                                    .message {                      border-bottom: 1px solid #ddd;                      padding: 10px;                    }                                    .message:last-child {                      border-bottom: none;                    }                                    #input-container {                      display: flex;                      margin-top: 20px;                    }                                    #message-input {                      flex: 1;                      padding: 10px;                      border: 1px solid #ddd;                      border-radius: 4px;                    }                                    #post-button {                      padding: 10px;                      background-color: #4caf50;                      color: #fff;                      border: none;                      border-radius: 4px;                      cursor: pointer;                    }                  </style>                <!-- </head> -->                <!-- <body> -->                                <div id="discussion-board">                  <div id="message-container"></div>                                  <div id="input-container">                    <input type="text" id="message-input" placeholder="Type your message...">                    <button id="post-button" onclick="postMessage()">Post</button>                  </div>                </div>                                <script>                  function postMessage() {                    var messageInput = document.getElementById('message-input');                    var messageContainer = document.getElementById('message-container');                                    var messageText = messageInput.value.trim();                    if (messageText !== '') {                      var messageDiv = document.createElement('div');                      messageDiv.className = 'message';                      messageDiv.textContent = messageText;                                      messageContainer.appendChild(messageDiv);                      messageInput.value = '';                    }                  }                </script>                                <!-- </body> -->            </section>        </div>    </div></div>`,`<div class="module-content">Module 2: Prompt Engineering</div>`,`<div class="module-content">Module 3: Generating Content</div>`,`<div class="module-content">Module 4: Recommendation Ideas</div>`,`<div class="module-content">Module 5: High Volume Grading</div>`,`<div class="module-content">Module 6: Manual Review</div>`,
 ];
 
 // Function to update progress bar, module number, and content
@@ -40,6 +44,9 @@ function updateProgress() {
     // Store progress and module number in localStorage
     localStorage.setItem('progress', progress);
     localStorage.setItem('moduleNumber', moduleNumber);
+
+    // Initial update of the back button visibility
+    updateBackButton();
 }
 
 // Function to handle "Get Started" button click
@@ -71,7 +78,49 @@ function handleRestartClick() {
 
     // Reset content in the content container
     contentContainer.innerHTML = moduleContent[moduleNumber];
+
+    backButton.style.display = 'none';
+
 }
+
+// Show or hide the back button based on the module number
+function updateBackButton() {
+    console.log('Module Number:', moduleNumber);
+    console.log('Back Button Display:', moduleNumber === 0 ? 'none' : 'inline-block');
+    backButton.style.display = moduleNumber === 0 ? 'none' : 'inline-block';
+}
+
+// Function to update progress, module number, and content when going back
+function goBack() {
+    // Check if module number is greater than 0
+    if (moduleNumber > 0) {
+        // Decrease module number
+        moduleNumber--;
+
+        // Update content in the content container
+        contentContainer.innerHTML = moduleContent[moduleNumber];
+
+        // Update progress bar width
+        progress -= 100 / totalModules;
+        progressBar.style.width = `${progress}%`;
+
+        // Update "Get Started" button text
+        getStartedButton.innerText = moduleNumber === 0 ? 'Get Started' : `Module ${moduleNumber}`;
+
+        // Show or hide the back button based on the module number
+        updateBackButton();
+
+        // Update localStorage
+        localStorage.setItem('moduleNumber', moduleNumber);
+        localStorage.setItem('progress', progress);
+    }
+}
+
+// Initial update of the back button visibility
+// updateBackButton();
+
+// Add click event listener to the "Back" button
+backButton.addEventListener('click', goBack);
 
 // Add click event listener to the "Get Started" button
 getStartedButton.addEventListener('click', handleGetStartedClick);
