@@ -20,11 +20,11 @@
                 <p>Rules-Based AI uses hard-coded rules to evaluate text. Instead of guessing the next word based on probability, these models determine grammar errors and suggest corrections with explanations. They are good for evaluating the correctness of writing. They can also be used to identify parts of speech and tense used.</p>
             </section>
         </div>
+        
         <div class="full-width">
             <section class="discussion">
                 <!-- Content for Discussion -->
                 <h3>Discussion</h3>
-                <p>Discussion content goes here.</p>
                 <style>
                     body {
                       font-family: Arial, sans-serif;
@@ -56,7 +56,8 @@
                 
                     #input-container {
                       display: flex;
-                      margin-top: 20px;
+                      margin-top: 10px;
+                      gap: 10px;
                     }
                 
                     #message-input {
@@ -68,41 +69,48 @@
                 
                     #post-button {
                       padding: 10px;
+                      margin: 5px auto;
                       background-color: #4caf50;
                       color: #fff;
                       border: none;
                       border-radius: 4px;
                       cursor: pointer;
                     }
+
+                    #fake-post1{
+                      max-width: 600px;
+                      margin: 0px auto;
+                      background-color: #fff;
+                      padding: 2px;
+                      border: solid;
+                      text-align: left;
+                    }
+                    
+                    #output {
+                      max-width: 600px;
+                      margin: 0px auto;
+                      background-color: #fff;
+                      padding: 2px;
+                      text-align: left;
+                    }
+                    .bordered {
+                      border: solid; /* You can adjust the color as needed */
+                    }
                   </style>
                 <!-- </head> -->
                 <!-- <body> -->
-                
+                <p id="fake-post1">Discussion content goes here.</p>
+                <p id="output"></p>
                 <div id="discussion-board">
                   <div id="message-container"></div>
                 
                   <div id="input-container">
                     <input type="text" id="message-input" placeholder="Type your message...">
-                    <button id="post-button" onclick="postMessage()">Post</button>
+                    <button id="post-button" onclick="createPost()">Post</button>
                   </div>
                 </div>
                 
-                <script>
-                  function postMessage() {
-                    var messageInput = document.getElementById('message-input');
-                    var messageContainer = document.getElementById('message-container');
                 
-                    var messageText = messageInput.value.trim();
-                    if (messageText !== '') {
-                      var messageDiv = document.createElement('div');
-                      messageDiv.className = 'message';
-                      messageDiv.textContent = messageText;
-                
-                      messageContainer.appendChild(messageDiv);
-                      messageInput.value = '';
-                    }
-                  }
-                </script>
                 
                 <!-- </body> -->
             </section>
