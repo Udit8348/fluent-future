@@ -1,7 +1,10 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+
+
+
 }
 
 .container {
@@ -103,4 +106,24 @@ button {
 
 .table-of-contents th {
     background-color: #f2f2f2; /* Gray background for header */
+}
+
+.table-of-contents td {
+    background-color: #f2f2f2; /* Gray background for header */
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr, td {
+    text-align: right;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
 }
