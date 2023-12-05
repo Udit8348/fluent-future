@@ -1,1 +1,102 @@
-<div class="module-content">Module 3: Generating Content</div>
+<div class="module-content">Module 3: Generating Content
+    <div class="full-width">
+        <section class="discussion">
+            <!-- Content for Discussion -->
+            <h3>Discussion</h3>
+            <style>
+                body {
+                  font-family: 'Red Hat Display', sans-serif;
+                  margin: 0;
+                  padding: 0;
+                  /* background-color: #f4f4f4; */
+                }
+            
+                #discussion-board {
+                  max-width: 600px;
+                  margin: 20px auto;
+                  background-color: #fff;
+                  padding: 20px;
+                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                  border-radius: 4px;
+                }
+            
+                #message-container {
+                  margin-bottom: 20px;
+                }
+            
+                .message {
+                  border-bottom: 1px solid #ddd;
+                  padding: 10px;
+                }
+            
+                .message:last-child {
+                  border-bottom: none;
+                }
+            
+                #input-container {
+                  display: flex;
+                  margin-top: 10px;
+                  gap: 10px;
+                  
+                }
+            
+                #message-input {
+                  flex: 1;
+                  padding: 10px;
+                  border: 1px solid #ddd;
+                  border-radius: 4px;
+                  font-family: 'Red Hat Display', sans-serif;
+                }
+            
+                #post-button {
+                  padding: 10px;
+                  margin: 5px auto;
+                  background-color: #36029e;
+                  color: #fff;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                }
+
+                #fake-post{
+                  max-width: 600px;
+                  margin: 0px auto;
+                  background-color: #ffffff;
+                  padding: 15px;
+                  /* border: solid; */
+                  border: 2px solid #36029e; /* Border color */
+                  border-radius: 10px; /* Adjust the border-radius for rounded corners */
+                  text-align: left;
+                }
+                
+                #output {
+                  max-width: 600px;
+                  margin: 0px auto;
+                  background-color: #ffffff;
+                  padding: 15px;
+                  text-align: left;
+                }
+                .bordered {
+                  border: 2px solid #36029e; /* Border color */
+                  border-radius: 10px; /* Adjust the border-radius for rounded corners */
+                }
+              </style>
+            <!-- </head> -->
+            <!-- <body> -->
+            <p id="fake-post"><i>User123:</i> I have found that the pros of a probabilistic LLM outweigh the cons! This is because there are a lot of introductory level grammar concepts and guides online so ChatGPT has been trained on a large dataset of them. This makes its guessing very effective!</p>
+            <p id="output"></p>
+            <div id="discussion-board">
+              <div id="message-container">Post a Reply!</div>
+            
+              <div id="input-container">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button id="post-button" onclick="createPost()">Post</button>
+              </div>
+            </div>
+            
+            
+            
+            <!-- </body> -->
+        </section>
+    </div>
+</div>

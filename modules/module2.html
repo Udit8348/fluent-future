@@ -13,17 +13,18 @@
             <section class="pros">
                 <h3>Iterative Prompting</h3>
                 <!-- TODO: find some examples of tools that use probabilistic methods, add an AI generated image to demonstrate this, maybe link to an article -->
-                <p> Iterative prompting involves starting with a broad question and then refining it over many attempts to get the desired result </p>
-                <h4>example: </h4>
-                    <h5>Iteration 1: Broad Request</h5> <p>
+                <p> Iterative prompting involves starting with a broad question and then refining it over many attempts to get the desired result. Let's take a look at an example below: </p>
+                    <p><b><i>Iteration 1: Broad Request</i></b></p>
+                    
+                    <p>
                     <i>Student:</i> "Can you help me learn some new words in French?"
                     <br> <br> In response to this broad request, the language model might generate a list of common French words with their English translations.
           
-                    <h5>Iteration 2: Specific Vocabulary Category</h5>
+                    <p><b><i>Iteration 2: Specific Vocabulary Category</i></b></p>
                     <i>Student:</i>  "I'm interested in learning vocabulary related to food. Can you give me some French words for different types of food?"
                     <br> <br> Now, the user refines the request to focus on a specific category, in this case, vocabulary related to food.
             
-                    <h5>Iteration 3: Further Refinement with Context</h5>
+                    <p><b><i>Iteration 3: Further Refinement with Context</i></b></p>
                     <i>Student:</i>  "Great! Can you now provide me with phrases or sentences that involve the food vocabulary? For example, use these words in a sentence about ordering food in a restaurant."
                     <br> <br> Here, the user not only narrows down the focus to sentences but also adds a context, asking for practical usage in a restaurant scenario. 
                     <hr>    
@@ -33,110 +34,120 @@
             <section class="cons">
                 <!-- TODO: find some examples of tools that use rule-base ai, add an ai generated image to demonstrate this, maybe link to an article -->
                 <h3>Single Use Prompts</h3>
-                <p>Single use prompts involves the practice of defining all the details and constraints of the question at once
-                    <h4>example: </h4>
+                <p><b><i>Individual Request</i></b></p>
+                <p>Single use prompts involves the practice of defining all the details and constraints of the question at once. Let's take a look at an example below:
                     <i>Teacher:</i>  "Can you write an essay prompt for students to practice new french food vocabulary in the attached file. Make sure that the scenario is detailed enough for students to be able to use all the words. Make sure that students are able to practice past tense sentence structure"
                     <hr>
                         In this single-use prompt, the user provides all the necessary details and constraints at once, including the setting (ancient library), the theme (time travel), and specific elements (transported to a historical moment). The model is expected to generate a creative writing prompt based on these instructions.
                         Single-use prompts are efficient when the user has a clear idea of what they want and can articulate the request with sufficient detail in a single interaction. This approach is particularly useful for tasks where the user doesn't need multiple rounds of refinement and wants to receive a response that adheres to specific criteria provided upfront.
-
                 </p>
             </section>
         </div>
+
+        <h3>ChatGPT Demo</h3>
+        <!-- EXMPLE -->
+        <div id="chat-container">
+          <iframe id="chat-iframe" src="https://chat.openai.com/share/c600730d-0c2e-4ab3-9250-4a6d116e0e93" allow="autoplay"></iframe>
+        </div>
         
         <div class="full-width">
-            <section class="discussion">
-                <!-- Content for Discussion -->
-                <h3>Discussion</h3>
-                <style>
-                    body {
-                      font-family: Arial, sans-serif;
-                      margin: 0;
-                      padding: 0;
-                      background-color: #f4f4f4;
-                    }
-                
-                    #discussion-board {
-                      max-width: 600px;
-                      margin: 20px auto;
-                      background-color: #fff;
-                      padding: 20px;
-                      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                    }
-                
-                    #message-container {
-                      margin-bottom: 20px;
-                    }
-                
-                    .message {
-                      border-bottom: 1px solid #ddd;
-                      padding: 10px;
-                    }
-                
-                    .message:last-child {
-                      border-bottom: none;
-                    }
-                
-                    #input-container {
-                      display: flex;
-                      margin-top: 10px;
-                      gap: 10px;
-                    }
-                
-                    #message-input {
-                      flex: 1;
-                      padding: 10px;
-                      border: 1px solid #ddd;
-                      border-radius: 4px;
-                    }
-                
-                    #post-button {
-                      padding: 10px;
-                      margin: 5px auto;
-                      background-color: #36029e;
-                      color: #fff;
-                      border: none;
-                      border-radius: 4px;
-                      cursor: pointer;
-                    }
-
-                    #fake-post1{
-                      max-width: 600px;
-                      margin: 0px auto;
-                      background-color: #ffffff;
-                      padding: 2px;
-                      border: solid;
-                      text-align: left;
-                    }
+          <section class="discussion">
+              <!-- Content for Discussion -->
+              <h3>Discussion</h3>
+              
+              <style>
+                  body {
+                    font-family: 'Red Hat Display', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    /* background-color: #f4f4f4; */
+                  }
+              
+                  #discussion-board {
+                    max-width: 600px;
+                    margin: 20px auto;
+                    background-color: #fff;
+                    padding: 20px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 4px;
+                  }
+              
+                  #message-container {
+                    margin-bottom: 20px;
+                  }
+              
+                  .message {
+                    border-bottom: 1px solid #ddd;
+                    padding: 10px;
+                  }
+              
+                  .message:last-child {
+                    border-bottom: none;
+                  }
+              
+                  #input-container {
+                    display: flex;
+                    margin-top: 10px;
+                    gap: 10px;
                     
-                    #output {
-                      max-width: 600px;
-                      margin: 0px auto;
-                      background-color: #ffffff;
-                      padding: 2px;
-                      text-align: left;
-                    }
-                    .bordered {
-                      border: solid; 
-                    }
-                  </style>
-                <!-- </head> -->
-                <!-- <body> -->
-                <p id="fake-post1">Discussion content goes here.</p>
-                <p id="output"></p>
-                <div id="discussion-board">
-                  <div id="message-container"></div>
-                
-                  <div id="input-container">
-                    <input type="text" id="message-input" placeholder="Type your message...">
-                    <button id="post-button" onclick="createPost()">Post</button>
-                  </div>
+                  }
+              
+                  #message-input {
+                    flex: 1;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    font-family: 'Red Hat Display', sans-serif;
+                  }
+              
+                  #post-button {
+                    padding: 10px;
+                    margin: 5px auto;
+                    background-color: #36029e;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                  }
+
+                  #fake-post{
+                    max-width: 600px;
+                    margin: 0px auto;
+                    background-color: #ffffff;
+                    padding: 15px;
+                    /* border: solid; */
+                    border: 2px solid #36029e; /* Border color */
+                    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+                    text-align: left;
+                  }
+                  
+                  #output {
+                    max-width: 600px;
+                    margin: 0px auto;
+                    background-color: #ffffff;
+                    padding: 15px;
+                    text-align: left;
+                  }
+                  .bordered {
+                    border: 2px solid #36029e; /* Border color */
+                    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+                  }
+                </style>
+              <!-- </head> -->
+              
+              <!-- <body> -->
+              <p id="fake-post"><i>User562:</i> Based on the sample ChatGPT conversations that used both scenarios, it seems like the iterative approach lets me have fine grained approach, while the individual request lets me accomplish a task quickly. I'll have to find a balance between these two!</p>
+              <p id="output"></p>
+              <div id="discussion-board">
+                <div id="message-container">Post a Reply!</div>
+              
+                <div id="input-container">
+                  <input type="text" id="message-input" placeholder="Type your message...">
+                  <button id="post-button" onclick="createPost()">Post</button>
                 </div>
-                
-                
-                
-                <!-- </body> -->
-            </section>
-        </div>
+              </div>
+              <!-- </body> -->
+          </section>
+      </div>
     </div>
 </div>

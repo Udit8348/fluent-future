@@ -2,20 +2,27 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Red Hat Display', sans-serif;
-
-
-
 }
 
 .container {
-    background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
+    color: #333;
 }
 
 h1 {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
     color: #333;
+}
+
+p {
+    font-family: 'Red Hat Display', sans-serif;
+    text-align: left;
+    color: #333;
+}
+
+.centered-text {
+    text-align: center;
 }
 
 .button-container {
@@ -23,6 +30,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
+    color: #333;
 }
 
 button {
@@ -60,6 +68,8 @@ button {
     width: 50%;
     margin: 20px auto;
     background-color: rgb(161, 174, 161);
+    border: 2px solid #36029e; /* Border color */
+    border-radius: 10px; /* Adjust the border-radius for rounded corners */
 }
 
 .progress-bar {
@@ -75,6 +85,7 @@ button {
 .module-content {
     width: 50%;
     margin: 0 auto;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 .side-by-side {
@@ -85,6 +96,7 @@ button {
 .pros,
 .cons {
     width: 48%;
+    text-align: left;
 }
 
 /* Add the following CSS styles */
@@ -109,7 +121,6 @@ button {
 }
 
 .table-of-contents td {
-    background-color: #f2f2f2; /* Gray background for header */
     text-align: left;
 }
 
@@ -126,4 +137,108 @@ tr, td {
 
 th {
     background-color: #f2f2f2;
+}
+
+/* New CSS rule for the container with background image */
+.top-image-container {
+    position: relative;
+    width: 75%;
+    height: 300px; /* Set a height for the container, adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
+}
+
+.top-image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://github.com/Udit8348/fluent-future/blob/main/res/fluent-future.001.jpeg?raw=true');
+    background-size: cover; /* Cover the entire container without tiling */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 0 0 15px 15px; /* Round the top two corners */
+}
+
+/* New CSS rule for the container with background image */
+.gpt-image-container {
+    position: relative;
+    width: 75%;
+    height: 200px; /* Set a height for the container, adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
+}
+
+.gpt-image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://github.com/Udit8348/fluent-future/blob/main/res/gpt-flex.png?raw=true');
+    background-size: cover; /* Cover the entire container without tiling */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 15px 15px 15px 15px; /* Round the top two corners */
+}
+
+/* New CSS rule for the container with background image */
+.bottom-image-container {
+    position: relative;
+    width: 75%;
+    height: 300px; /* Set a height for the container, adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
+}
+
+.bottom-image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://github.com/Udit8348/fluent-future/blob/main/res/fluent-future.002.jpeg?raw=true');
+    background-size: cover; /* Cover the entire container without tiling */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 15px 15px 0 0; /* Round the top two corners */
+}
+
+/* Anchored elements styling */
+.anchored-elements {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+hr {
+    border: 2px solid #36029e; /* Set border properties */
+    margin: 20px 0; /* Add margin for spacing */
+  }
+
+  #chat-container {
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 20px auto; /* Center the chat container */
+    overflow: hidden;
+}
+
+#chat-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px 5px 5px 5px; /* Round the top two corners */
 }
