@@ -1,10 +1,21 @@
 <div class="module-content">
     <h2>Module 3: Generating Content</h2>
-    <p>One of the most important aspects of learning a language is relevant and engaging lessons. While textbooks are filled with lessons, they can become out of date as technology changes. The textbook might be decades old and still portray students exchanging emails as contact info. With LLMs it is easy to generate a reading module that is up to date with modern times</p>
-    <div class="full-width">
-      <h3>Example 1: Iterative Prompting</h3>
-                <!-- TODO: find some examples of tools that use probabilistic methods, add an AI generated image to demonstrate this, maybe link to an article -->
-                <p> The goal here is to generate a reading module that highlights the contrast between traditional methods of communication portrayed in outdated textbooks and modern communication methods using email.</p>
+    <div class="sections-container">
+      <!-- Start of First Section -->
+      <div class="full-width">
+        <section class="review">
+          <h3>Overview</h3>
+          <p>One of the most important aspects of learning a language is relevant and engaging lessons. While textbooks are filled with lessons, they can become out of date as technology changes. The textbook might be decades old and still portray students exchanging emails as contact info. With LLMs it is easy to generate a reading module that is up to date with modern times</p>
+        </section>
+      </div>
+      <!-- End of First Section -->
+
+
+      <!-- Start of Side by Side -->
+      <div class="side-by-side">
+          <section class="pros">
+              <h3>Iterative Prompting</h3>
+              <p> The goal here is to generate a reading module that highlights the contrast between traditional methods of communication portrayed in outdated textbooks and modern communication methods using email.</p>
                     <p>
                     <p><b><i>Iteration 1: Broad Request</i></b></p>
                     
@@ -26,117 +37,125 @@
                     <hr>    
                     Through these iterations, the user refines the request, providing more specific details and guidance at each stage. This iterative approach ensures that the reading module is tailored to the user's interests and preferences regarding the coverage of recent events in renewable energy.  
                   </p>
-            <h3>Example 2: Single Use Prompt</h3>
-                <!-- TODO: find some examples of tools that use probabilistic methods, add an AI generated image to demonstrate this, maybe link to an article -->
-                <p> The goal here is to generate a reading module that highlights the contrast between traditional methods of communication portrayed in outdated textbooks and modern communication methods using email.</p>
+          </section>
+          <section class="cons">
+              <!-- TODO: find some examples of tools that use rule-base ai, add an ai generated image to demonstrate this, maybe link to an article -->
+              <h3>Single Use Prompts</h3>
+              <p> The goal here is to generate a reading module that highlights the contrast between traditional methods of communication portrayed in outdated textbooks and modern communication methods using email.</p>
                     <p>
                     <p><b><i>Iteration 1: Broad Request</i></b></p>
                     
                       
                     <i>Teacher:</i> "Develop a reading module on current events, covering a variety of topics that reflect the latest happenings globally. Include a mix of political, economic, social, and environmental events to provide a comprehensive overview. Generate a list of vocabulary students would need to learn before-hand based on the attached list of words that students already know."
-                    <br> <br> With a single specific prompt the teacher is able to generate content for a lesson that is up to date quickly and effectively
+                    <hr>
+                    <br> With a single specific prompt the teacher is able to generate content for a lesson that is up to date quickly and effectively
           
-                    <hr>    
+                        
                   </p>
+          </section>
+      </div>
+      <!-- End of Side by Side -->
+        
+      <!-- Start of the Discussion -->
+        <div class="full-width">
+          <section class="discussion">
+              
+              <h3>Discussion</h3>
+              
+              <style>
+                  body {
+                    font-family: 'Red Hat Display', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    /* background-color: #f4f4f4; */
+                  }
+              
+                  #discussion-board {
+                    max-width: 600px;
+                    margin: 20px auto;
+                    background-color: #fff;
+                    padding: 20px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 4px;
+                  }
+              
+                  #message-container {
+                    margin-bottom: 20px;
+                  }
+              
+                  .message {
+                    border-bottom: 1px solid #ddd;
+                    padding: 10px;
+                  }
+              
+                  .message:last-child {
+                    border-bottom: none;
+                  }
+              
+                  #input-container {
+                    display: flex;
+                    margin-top: 10px;
+                    gap: 10px;
+                    
+                  }
+              
+                  #message-input {
+                    flex: 1;
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    font-family: 'Red Hat Display', sans-serif;
+                  }
+              
+                  #post-button {
+                    padding: 10px;
+                    margin: 5px auto;
+                    background-color: #36029e;
+                    color: #fff;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                  }
 
-
-        <section class="discussion">
-            <!-- Content for Discussion -->
-            <h3>Discussion</h3>
-            <style>
-                body {
-                  font-family: 'Red Hat Display', sans-serif;
-                  margin: 0;
-                  padding: 0;
-                  /* background-color: #f4f4f4; */
-                }
-            
-                #discussion-board {
-                  max-width: 600px;
-                  margin: 20px auto;
-                  background-color: #fff;
-                  padding: 20px;
-                  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                  border-radius: 4px;
-                }
-            
-                #message-container {
-                  margin-bottom: 20px;
-                }
-            
-                .message {
-                  border-bottom: 1px solid #ddd;
-                  padding: 10px;
-                }
-            
-                .message:last-child {
-                  border-bottom: none;
-                }
-            
-                #input-container {
-                  display: flex;
-                  margin-top: 10px;
-                  gap: 10px;
+                  #fake-post{
+                    max-width: 600px;
+                    margin: 0px auto;
+                    background-color: #ffffff;
+                    padding: 15px;
+                    /* border: solid; */
+                    border: 2px solid #36029e; /* Border color */
+                    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+                    text-align: left;
+                  }
                   
-                }
-            
-                #message-input {
-                  flex: 1;
-                  padding: 10px;
-                  border: 1px solid #ddd;
-                  border-radius: 4px;
-                  font-family: 'Red Hat Display', sans-serif;
-                }
-            
-                #post-button {
-                  padding: 10px;
-                  margin: 5px auto;
-                  background-color: #36029e;
-                  color: #fff;
-                  border: none;
-                  border-radius: 4px;
-                  cursor: pointer;
-                }
-
-                #fake-post{
-                  max-width: 600px;
-                  margin: 0px auto;
-                  background-color: #ffffff;
-                  padding: 15px;
-                  /* border: solid; */
-                  border: 2px solid #36029e; /* Border color */
-                  border-radius: 10px; /* Adjust the border-radius for rounded corners */
-                  text-align: left;
-                }
-                
-                #output {
-                  max-width: 600px;
-                  margin: 0px auto;
-                  background-color: #ffffff;
-                  padding: 15px;
-                  text-align: left;
-                }
-                .bordered {
-                  border: 2px solid #36029e; /* Border color */
-                  border-radius: 10px; /* Adjust the border-radius for rounded corners */
-                }
-              </style>
-            <!-- </head> -->
-            <!-- <body> -->
-            <p id="fake-post"><i>User321:</i> I really like the examples! It really helps reinforce the types of prompting from the previous module and shows how you can use LLMs both with a clear idea in mind and with a broad initial idea that you can narrow down</p>
-            <p id="output"></p>
-            <div id="discussion-board">
-              <div id="message-container">Post a Reply!</div>
-            
-              <div id="input-container">
-                <input type="text" id="message-input" placeholder="Type your message...">
-                <button id="post-button" onclick="createPost()">Post</button>
+                  #output {
+                    max-width: 600px;
+                    margin: 0px auto;
+                    background-color: #ffffff;
+                    padding: 15px;
+                    text-align: left;
+                  }
+                  .bordered {
+                    border: 2px solid #36029e; /* Border color */
+                    border-radius: 10px; /* Adjust the border-radius for rounded corners */
+                  }
+                </style>
+              <!-- </head> -->
+              
+              <!-- <body> -->
+              <p id="fake-post"><i>User484:</i> I really like the examples! It really helps reinforce the types of prompting from the previous module and shows how you can use LLMs both with a clear idea in mind and with a broad initial idea that you can narrow down</p>
+              <p id="output"></p>
+              <div id="discussion-board">
+                <div id="message-container">Post a Reply!</div>
+              
+                <div id="input-container">
+                  <input type="text" id="message-input" placeholder="Type your message...">
+                  <button id="post-button" onclick="createPost()">Post</button>
+                </div>
               </div>
-            </div>
-            
-            
-            
-            <!-- </body> -->
-        </section>
+              <!-- </body> -->
+          </section>
+      </div>
+      <!-- End of the Discussion -->
     </div>
 </div>

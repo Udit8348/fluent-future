@@ -190,6 +190,81 @@ th {
 }
 
 /* New CSS rule for the container with background image */
+.classics-image-container {
+    position: relative;
+    width: 75%;
+    height: 350px; /* Set a height for the container, adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
+}
+
+.classics-image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://github.com/Udit8348/fluent-future/blob/main/res/classics.png?raw=true');
+    background-size: cover; /* Cover the entire container without tiling */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 15px 15px 15px 15px; /* Round the top two corners */
+}
+
+/* New CSS rule for the container with background image */
+.hvol-image-container {
+    position: relative;
+    width: 75%;
+    height: 350px; /* Set a height for the container, adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
+}
+
+.hvol-image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://github.com/Udit8348/fluent-future/blob/main/res/hvol-grading.png?raw=true');
+    background-size: cover; /* Cover the entire container without tiling */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 15px 15px 15px 15px; /* Round the top two corners */
+}
+
+/* New CSS rule for the container with background image */
+.prof-image-container {
+    position: relative;
+    width: 75%;
+    height: 350px; /* Set a height for the container, adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
+}
+
+.prof-image-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://github.com/Udit8348/fluent-future/blob/main/res/prof.png?raw=true');
+    background-size: cover; /* Cover the entire container without tiling */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border-radius: 15px 15px 15px 15px; /* Round the top two corners */
+}
+
+/* New CSS rule for the container with background image */
 .bottom-image-container {
     position: relative;
     width: 75%;
@@ -241,4 +316,8 @@ hr {
     height: 100%;
     border: none;
     border-radius: 5px 5px 5px 5px; /* Round the top two corners */
+}
+
+ul {
+    text-align: left;
 }
