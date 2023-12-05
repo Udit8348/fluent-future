@@ -193,7 +193,7 @@ th {
 .classics-image-container {
     position: relative;
     width: 75%;
-    height: 350px; /* Set a height for the container, adjust as needed */
+    height: 500px; /* Set a height for the container, adjust as needed */
     margin: 0 auto; /* Center the container horizontally */
     overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
 }
@@ -218,7 +218,7 @@ th {
 .hvol-image-container {
     position: relative;
     width: 75%;
-    height: 350px; /* Set a height for the container, adjust as needed */
+    height: 500px; /* Set a height for the container, adjust as needed */
     margin: 0 auto; /* Center the container horizontally */
     overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
 }
@@ -243,7 +243,7 @@ th {
 .prof-image-container {
     position: relative;
     width: 75%;
-    height: 350px; /* Set a height for the container, adjust as needed */
+    height: 500px; /* Set a height for the container, adjust as needed */
     margin: 0 auto; /* Center the container horizontally */
     overflow: hidden; /* Hide overflow to prevent vertical scrollbar */
 }
